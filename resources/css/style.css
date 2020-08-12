@@ -1,0 +1,104 @@
+:root {
+    --color-primary: #e67e22;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: white;
+    color: #555;
+    font-family: 'Lato', sans-serif;
+    font-size: 200%;
+    font-weight: 300; /* default */
+    text-rendering: optimizeLegibility;
+    max-width: 1140px;
+}
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./images/hero.jpg") ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.header-content {
+    max-width: 100vw;
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5vw;
+}
+
+header h2 {
+    margin-bottom: -10px;
+}
+
+header h1, h2 {
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+header .buttons a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 30px;
+    font-size: 0.8rem;
+    border-radius: 32px;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+}
+
+header .header-content a:first-child {
+    background-color: var(--color-primary);   
+    margin-right: 0.8rem; 
+}
+
+header .header-content a:first-child:hover {
+    background-color: #cf6d17;   
+}
+
+header .header-content a:last-child {
+    background-color: transparent;
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+header .header-content a:last-child:hover {
+    color: white;
+    border: 1px solid #cf6d17;
+    background-color: #cf6d17;
+}
+
+@media (max-width: 500px) {
+    header .header-content {
+        padding: 0.8rem;
+        margin-left: 0;
+    }
+
+    header .header-content .titles {
+        font-size: 0.6rem;
+    }
+
+    header .header-content a:first-child {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
